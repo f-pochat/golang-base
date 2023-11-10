@@ -2,8 +2,9 @@ package repository
 
 import (
 	"errors"
-	"f-pochat/golang-base/helper"
-	"f-pochat/golang-base/model"
+
+	"github.com/f-pochat/golang-base/helper"
+	"github.com/f-pochat/golang-base/model"
 
 	"github.com/google/uuid"
 	"gorm.io/gorm"
