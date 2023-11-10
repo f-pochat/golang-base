@@ -4,14 +4,17 @@ import (
 	"errors"
 
 	"github.com/f-pochat/golang-base/helper"
-	"github.com/f-pochat/golang-base/model"
 
 	"github.com/google/uuid"
 	"gorm.io/gorm"
 )
 
-type BaseRepositoryImpl[T model.BaseModel] struct {
+type BaseRepositoryImpl[T any] struct {
 	Db *gorm.DB
+}
+
+func NewBaseRepositoryImpl[T any](Db *gorm.DB) BaseRepository[T] {
+	return &BaseRepositoryImpl[T]{Db: Db}
 }
 
 func (repo BaseRepositoryImpl[T]) Save(data T) {
