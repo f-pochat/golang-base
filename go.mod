@@ -1,4 +1,4 @@
-module f-pochat/golang-base
+module github.com/f-pochat/golang-base
 
 go 1.21.4
 
